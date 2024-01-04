@@ -2,7 +2,7 @@ veracode_static_scan:
   # Please only specify trigger:true for either push event or 
   # pull request event. Specifying both will only execute push event.
   # Leaving them both false means this will never run
-  push:
+  push: true
     trigger: true
     # Please only specify either branches_to_run or branches_to_exclude
     # Entering both will only execute branches_to_run
@@ -21,7 +21,7 @@ veracode_static_scan:
   # By selecting a branch here - Veracode will save your last scan result
   # As an App Profile - given the current name of your scanned repo
   # Use 'none' if you would not like any scans saved to the platform
-  analysis_branch: ENTER_BRANCH_NAME_HERE
+  analysis_branch: master
   #If the break_build_policy_findings is set to true, the build will break if the pipeline scan finds any policy violations.      
   break_build_policy_findings: true
   #If the break_build_on_error is set to true, the build will break if the scan failed to complete in time or with an error.
@@ -36,7 +36,7 @@ veracode_sca_scan:
   # Please only specify trigger:true for either push event or 
   # pull request event. Specifying both will only execute push event.
   # Leaving them both false means this will never run
-  push:
+  push: 
     trigger: true
     branches_to_run:
       - '*'
